@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<RelativeLayout
+    android:id="@+id/sportsRelLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="15dp"
+    >
+    <CheckBox
+        android:id="@+id/cbCricket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cricket"
+        android:checked="true"
+        />
+    <CheckBox
+        android:id="@+id/cbSquash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Squash"
+        android:checked="false"
+        android:layout_toRightOf="@id/cbCricket"
+        android:layout_marginLeft="15dp"
+        />
+    <CheckBox
+        android:id="@+id/cbFootball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Football"
+        android:checked="true"
+        android:layout_toRightOf="@+id/cbSquash"
+        android:layout_marginLeft="15dp"
+        />
+
+</RelativeLayout>
+
+   <RadioGroup
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/rgGender"
+       android:orientation="horizontal"
+       android:layout_below="@+id/sportsRelLayout"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="15dp"
+       >
+       <RadioButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Male"
+           android:checked="true"
+           android:id="@+id/rbMale"
+           />
+       <RadioButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Female"
+           android:id="@+id/rbFemale"
+           />
+       <RadioButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Other"
+           android:id="@+id/rbOther"
+           />
+
+   </RadioGroup>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/secondBar"
+        android:layout_centerInParent="true"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+      />
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Wave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="#B1ACA0"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>
